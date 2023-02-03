@@ -1,0 +1,149 @@
+// MIXINS
+@mixin w-h($w: 50px, $h: 50px) {
+  width: $w;
+  height: $h;
+}
+
+@mixin flexbox($fd: row, $ai: center, $jc: center) {
+  display: flex;
+  flex-direction: $fd;
+  align-items: $ai;
+  justify-content: $jc;
+}
+
+// KEYFRAMES
+@keyframes wiggle {
+  0% {
+    opacity: 1;
+    transform: none;
+  }
+  20% {
+    opacity: 1;
+    transform: rotate(15deg);
+  }
+  40% {
+    opacity: 1;
+    transform: rotate(-20deg);
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(30deg);
+  }
+  60% {
+    opacity: 1;
+    transform: rotate(-20deg);
+  }
+  80% {
+    opacity: 1;
+    transform: rotate(15deg);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// STYLES
+.loading {
+  @include w-h(100vw, 100vh);
+  @include flexbox($fd: column);
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+
+  h3 {
+    color: white;
+    font-size: 30px;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: appear 0.3s ease-in forwards;
+  }
+
+  .bean_container {
+    @include w-h(auto, 15px);
+    @include flexbox;
+
+    .bean {
+      @include w-h(20px, 20px);
+      object-fit: contain;
+      margin: 0 10px 0 10px;
+      opacity: 0;
+
+      &:nth-child(1) {
+        animation: wiggle 0.5s ease-in 0.4s forwards;
+      }
+
+      &:nth-child(2) {
+        animation: wiggle 0.5s ease-in 0.8s forwards;
+      }
+
+      &:nth-child(3) {
+        animation: wiggle 0.5s ease-in 1.2s forwards;
+      }
+
+      &:nth-child(4) {
+        animation: wiggle 0.5s ease-in 1.6s forwards;
+      }
+
+      &:nth-child(5) {
+        animation: wiggle 0.5s ease-in 2s forwards;
+      }
+    }
+  }
+}
+
+.hero {
+  @include w-h(100vw, 100vh);
+  @include flexbox;
+  background-color: black;
+
+  h1 {
+    color: white;
+    // font-size: 150px;
+    font-size: 9vw;
+    -webkit-text-stroke: 3px;
+    -webkit-text-stroke-color: black;
+    opacity: 1;
+    z-index: 5;
+    user-select: none;
+  }
+
+  .menu {
+    @include w-h(25px, 25px);
+    object-fit: contain;
+    position: fixed;
+    top: 10%;
+    right: 11%;
+    opacity: 0;
+    background-color: black;
+    z-index: 10;
+    cursor: pointer;
+  }
+
+  .image_container {
+    @include w-h(80%, 80%);
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    column-gap: 2%;
+    user-select: none;
+
+    .hero_image {
+      @include w-h(100%, 70%);
+      object-fit: cover;
+      opacity: 0;
+    }
+  }
+}
