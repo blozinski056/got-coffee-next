@@ -5,3 +5,16 @@
   font-family: "Kalam", cursive;
   color: white;
 }
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: black;
+  border: solid 1px white;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(53, 53, 53);
+}
