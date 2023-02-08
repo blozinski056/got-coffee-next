@@ -23,9 +23,8 @@
     .img_container {
       @include w-h(auto, 70%);
       position: absolute;
-      top: 50%;
+      top: 18%;
       right: 15%;
-      transform: translateY(-50%);
       padding: 10px;
       border: solid 2px white;
 
@@ -45,7 +44,7 @@
       z-index: 10;
 
       .title {
-        @include w-h(550px, 150px);
+        @include w-h(100%, 100%);
         @include flexbox;
         font-size: 50px;
         background-color: black;
@@ -69,7 +68,7 @@
       z-index: 10;
 
       .paragraph {
-        @include w-h(400px, 400px);
+        @include w-h(100%, 100%);
         @include flexbox($ai: flex-start);
         background-color: black;
         border: solid 2px white;
@@ -90,7 +89,7 @@
       @include w-h(auto, 70%);
       position: absolute;
       top: 50%;
-      left: 15%;
+      left: 20%;
       transform: translateY(-50%);
       padding: 10px;
       border: solid 2px white;
@@ -139,7 +138,7 @@
         z-index: 5;
 
         .founder_name {
-          @include w-h(350px, 80px);
+          @include w-h(100%, 100%);
           @include flexbox;
           background-color: black;
           border: solid 2px white;

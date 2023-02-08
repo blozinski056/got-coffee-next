@@ -1,0 +1,72 @@
+.location {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: black;
+  padding: 5vh;
+}
+.location .title_container {
+  width: 250px;
+  height: 100px;
+  position: relative;
+  background-color: white;
+}
+.location .title_container .title {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background-color: black;
+  border: solid 2px white;
+  transform: translate(-5px, -5px);
+  font-size: 40px;
+  padding: 10px;
+  font-weight: 700;
+}
+.location .address_container {
+  width: 300px;
+  height: 150px;
+  position: relative;
+  background-color: white;
+}
+.location .address_container .address {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background-color: black;
+  border: solid 2px white;
+  transform: translate(-5px, -5px);
+  font-size: 30px;
+  padding: 10px;
+}
+.location .directions_container {
+  width: 250px;
+  height: 120px;
+  position: relative;
+  background-color: white;
+}
+.location .directions_container .directions {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background-color: black;
+  border: solid 2px white;
+  transform: translate(-5px, -5px);
+  font-size: 15px;
+  padding: 10px;
+  text-align: center;
+}/*# sourceMappingURL=Location.module.css.map */
