@@ -39,7 +39,7 @@
       @include w-h(550px, 150px);
       background-color: white;
       position: absolute;
-      top: 10%;
+      top: 12%;
       left: 15%;
       z-index: 10;
 
@@ -50,7 +50,7 @@
         background-color: black;
         border: solid 2px white;
         position: absolute;
-        transform: translate(-10px, -10px);
+        transform: translate(-5px, -5px);
 
         span {
           font-weight: 700;
@@ -73,7 +73,7 @@
         background-color: black;
         border: solid 2px white;
         position: absolute;
-        transform: translate(-10px, -10px);
+        transform: translate(-5px, -5px);
         padding: 20px;
       }
     }

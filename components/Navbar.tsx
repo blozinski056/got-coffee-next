@@ -79,27 +79,11 @@ function Navbar() {
     }
   };
 
-  const resetMenu = () => {
-    openMenu();
-
-    let menuImg = document.getElementById("menu") as HTMLElement;
-    menuImg.animate(
-      {
-        opacity: 0,
-      },
-      {
-        fill: "forwards",
-      }
-    );
-  };
-
   return (
     <div className={styles.menu_container} id="menu_container">
       <ul>
         <li className="menu_tab">
-          <Link href="/" onClick={() => resetMenu()}>
-            Home
-          </Link>
+          <Link href="/">Home</Link>
         </li>
         <li className="menu_tab">
           <Link href="/about">About</Link>
