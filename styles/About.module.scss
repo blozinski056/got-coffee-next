@@ -110,9 +110,7 @@
 
       .founder_title_container {
         @include w-h(300px, 70px);
-        @include flexbox;
         background-color: white;
-        padding: 5px;
         position: absolute;
         top: 0%;
         right: 10%;
@@ -120,50 +118,55 @@
         .founder_title {
           @include w-h(100%, 100%);
           @include flexbox;
-          background-color: transparent;
-          border: solid 2px black;
-          color: black;
+          position: absolute;
+          background-color: black;
+          border: solid 2px white;
+          color: white;
           font-size: 20px;
-          font-weight: 500;
+          transform: translate(-5px, -5px);
 
           span {
-            color: black;
             font-weight: 700;
           }
         }
       }
 
-      .founder_name {
+      .founder_name_container {
         @include w-h(350px, 80px);
-        @include flexbox;
-        background-color: black;
-        border: solid 2px white;
-        font-size: 40px;
+        background-color: white;
         position: absolute;
-        top: 8%;
-        left: 10%;
-        box-shadow: 1px 1px 10px black;
+        top: 9%;
         z-index: 5;
+
+        .founder_name {
+          @include w-h(350px, 80px);
+          @include flexbox;
+          background-color: black;
+          border: solid 2px white;
+          font-size: 40px;
+          position: absolute;
+          font-weight: 700;
+          transform: translate(-5px, -5px);
+        }
       }
 
       .founder_intro_container {
         @include w-h(400px, 400px);
-        @include flexbox;
-        padding: 10px;
         background-color: white;
         position: absolute;
-        bottom: 15%;
+        bottom: 5%;
         left: 50%;
         transform: translateX(-50%);
 
         .founder_intro {
           @include w-h(100%, 100%);
-          background-color: transparent;
-          border: solid 2px black;
-          color: black;
-          padding: 10px;
+          background-color: black;
+          border: solid 2px white;
+          position: absolute;
+          color: white;
+          padding: 20px;
           font-size: 15px;
-          font-weight: 700;
+          transform: translate(-5px, -5px);
         }
       }
     }
