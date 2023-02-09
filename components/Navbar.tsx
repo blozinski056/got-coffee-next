@@ -86,13 +86,13 @@ function Navbar() {
           <Link href="/">Home</Link>
         </li>
         <li className="menu_tab">
+          <Link href="/menu">Menu</Link>
+        </li>
+        <li className="menu_tab">
           <Link href="/about">About</Link>
         </li>
         <li className="menu_tab">
           <Link href="/location">Location</Link>
-        </li>
-        <li className="menu_tab">
-          <Link href="/contact">Contact</Link>
         </li>
       </ul>
       <img

@@ -13,14 +13,28 @@
 
 .location {
   @include w-h(100vw, 100vh);
-  @include flexbox($fd: column, $jc: flex-start);
+  @include flexbox;
   background-color: black;
   padding: 5vh;
 
+  .location_grid {
+    @include w-h(900px, 600px);
+    display: grid;
+    grid-template-columns: repeat(12, 75px);
+    grid-template-rows: repeat(12, 50px);
+    justify-items: center;
+    align-items: center;
+  }
+
   .title_container {
-    @include w-h(250px, 100px);
+    @include w-h(275px, 130px);
     position: relative;
     background-color: white;
+    grid-column: 1 / 5;
+    grid-row: 1 / 4;
+    justify-self: flex-start;
+    align-self: flex-start;
+    transform: translate(5px, 5px);
 
     .title {
       @include w-h(100%, 100%);
@@ -36,9 +50,13 @@
   }
 
   .address_container {
-    @include w-h(300px, 150px);
+    @include w-h(285px, 125px);
     position: relative;
     background-color: white;
+    grid-column: 5 / 9;
+    grid-row: 6 / 9;
+    justify-self: flex-end;
+    align-self: flex-end;
 
     .address {
       @include w-h(100%, 100%);
@@ -47,15 +65,21 @@
       background-color: black;
       border: solid 2px white;
       transform: translate(-5px, -5px);
-      font-size: 30px;
+      font-size: 25px;
       padding: 10px;
+      text-align: center;
     }
   }
 
   .directions_container {
-    @include w-h(250px, 120px);
+    @include w-h(595px, 75px);
     position: relative;
     background-color: white;
+    grid-column: 1 / 9;
+    grid-row: 11 / 13;
+    justify-self: flex-start;
+    align-self: flex-end;
+    transform: translateX(5px);
 
     .directions {
       @include w-h(100%, 100%);
@@ -64,9 +88,97 @@
       background-color: black;
       border: solid 2px white;
       transform: translate(-5px, -5px);
-      font-size: 15px;
+      font-size: 18px;
       padding: 10px;
       text-align: center;
+    }
+  }
+
+  .hours_container {
+    @include w-h(265px, 325px);
+    position: relative;
+    background-color: white;
+    grid-column: 9 / 13;
+    grid-row: 6 / 13;
+    justify-self: flex-end;
+    align-self: flex-end;
+
+    .hours {
+      @include w-h(100%, 100%);
+      @include flexbox($fd: column);
+      position: absolute;
+      background-color: black;
+      border: solid 2px white;
+      transform: translate(-5px, -5px);
+      padding: 10px;
+      font-size: 20px;
+      line-height: 2.5rem;
+    }
+  }
+
+  .phone_container {
+    @include w-h(285px, 75px);
+    position: relative;
+    background-color: white;
+    grid-column: 5 / 9;
+    grid-row: 9 / 11;
+    justify-self: flex-end;
+    align-self: flex-end;
+
+    .phone {
+      @include w-h(100%, 100%);
+      @include flexbox;
+      position: absolute;
+      background-color: black;
+      border: solid 2px white;
+      transform: translate(-5px, -5px);
+      padding: 10px;
+      font-size: 20px;
+    }
+  }
+
+  .market_container {
+    @include w-h(280px, 345px);
+    padding: 10px;
+    border: solid 2px white;
+    grid-column: 1 / 5;
+    grid-row: 4 / 11;
+    justify-self: flex-start;
+    align-self: flex-end;
+
+    .market_img {
+      @include w-h(100%, 100%);
+      object-fit: cover;
+    }
+  }
+
+  .needle_container {
+    @include w-h(590px, 250px);
+    padding: 10px;
+    border: solid 2px white;
+    grid-column: 5 / 13;
+    grid-row: 1 / 6;
+    justify-self: flex-end;
+    align-self: flex-start;
+
+    .needle_img {
+      @include w-h(100%, 100%);
+      object-fit: cover;
+    }
+  }
+
+  .ferris_wheel_container {
+    @include w-h(285px, 350px);
+    padding: 10px;
+    border: solid 2px white;
+    grid-column: 5 / 9;
+    grid-row: 1 / 8;
+    justify-self: flex-end;
+    align-self: flex-start;
+
+    .ferris_wheel_img {
+      @include w-h(100%, 100%);
+      object-fit: cover;
     }
   }
 }

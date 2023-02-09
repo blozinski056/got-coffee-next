@@ -38,8 +38,8 @@ function About() {
               for new and returning customers to come sit, relax, and chat!
               <br />
               <br />
-              When you arrive, make sure you ask for our pastry of the day! We
-              make one batch of fresh pastries Monday to Saturday!
+              If you visit us on the weekend, be sure to ask us about our pastry
+              of the day! We have a new pastry every Saturday and Sunday!
             </div>
           </div>
         </section>

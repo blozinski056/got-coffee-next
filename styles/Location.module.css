@@ -2,17 +2,31 @@
   width: 100vw;
   height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   background-color: black;
   padding: 5vh;
 }
+.location .location_grid {
+  width: 900px;
+  height: 600px;
+  display: grid;
+  grid-template-columns: repeat(12, 75px);
+  grid-template-rows: repeat(12, 50px);
+  justify-items: center;
+  align-items: center;
+}
 .location .title_container {
-  width: 250px;
-  height: 100px;
+  width: 275px;
+  height: 130px;
   position: relative;
   background-color: white;
+  grid-column: 1/5;
+  grid-row: 1/4;
+  justify-self: flex-start;
+  align-self: flex-start;
+  transform: translate(5px, 5px);
 }
 .location .title_container .title {
   width: 100%;
@@ -30,10 +44,14 @@
   font-weight: 700;
 }
 .location .address_container {
-  width: 300px;
-  height: 150px;
+  width: 285px;
+  height: 125px;
   position: relative;
   background-color: white;
+  grid-column: 5/9;
+  grid-row: 6/9;
+  justify-self: flex-end;
+  align-self: flex-end;
 }
 .location .address_container .address {
   width: 100%;
@@ -46,14 +64,20 @@
   background-color: black;
   border: solid 2px white;
   transform: translate(-5px, -5px);
-  font-size: 30px;
+  font-size: 25px;
   padding: 10px;
+  text-align: center;
 }
 .location .directions_container {
-  width: 250px;
-  height: 120px;
+  width: 595px;
+  height: 75px;
   position: relative;
   background-color: white;
+  grid-column: 1/9;
+  grid-row: 11/13;
+  justify-self: flex-start;
+  align-self: flex-end;
+  transform: translateX(5px);
 }
 .location .directions_container .directions {
   width: 100%;
@@ -66,7 +90,104 @@
   background-color: black;
   border: solid 2px white;
   transform: translate(-5px, -5px);
-  font-size: 15px;
+  font-size: 18px;
   padding: 10px;
   text-align: center;
+}
+.location .hours_container {
+  width: 265px;
+  height: 325px;
+  position: relative;
+  background-color: white;
+  grid-column: 9/13;
+  grid-row: 6/13;
+  justify-self: flex-end;
+  align-self: flex-end;
+}
+.location .hours_container .hours {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background-color: black;
+  border: solid 2px white;
+  transform: translate(-5px, -5px);
+  padding: 10px;
+  font-size: 20px;
+  line-height: 2.5rem;
+}
+.location .phone_container {
+  width: 285px;
+  height: 75px;
+  position: relative;
+  background-color: white;
+  grid-column: 5/9;
+  grid-row: 9/11;
+  justify-self: flex-end;
+  align-self: flex-end;
+}
+.location .phone_container .phone {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background-color: black;
+  border: solid 2px white;
+  transform: translate(-5px, -5px);
+  padding: 10px;
+  font-size: 20px;
+}
+.location .market_container {
+  width: 280px;
+  height: 345px;
+  padding: 10px;
+  border: solid 2px white;
+  grid-column: 1/5;
+  grid-row: 4/11;
+  justify-self: flex-start;
+  align-self: flex-end;
+}
+.location .market_container .market_img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.location .needle_container {
+  width: 590px;
+  height: 250px;
+  padding: 10px;
+  border: solid 2px white;
+  grid-column: 5/13;
+  grid-row: 1/6;
+  justify-self: flex-end;
+  align-self: flex-start;
+}
+.location .needle_container .needle_img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.location .ferris_wheel_container {
+  width: 285px;
+  height: 350px;
+  padding: 10px;
+  border: solid 2px white;
+  grid-column: 5/9;
+  grid-row: 1/8;
+  justify-self: flex-end;
+  align-self: flex-start;
+}
+.location .ferris_wheel_container .ferris_wheel_img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=Location.module.css.map */
