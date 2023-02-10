@@ -64,7 +64,7 @@ export default function Home() {
             id="hero_image"
             width={4096}
             height={273}
-            loading={"eager"}
+            priority={true}
           />
           <Image
             src="/nathan-dumlao-Y3AqmbmtLQI-unsplash.jpg"
@@ -73,7 +73,7 @@ export default function Home() {
             id="hero_image"
             width={3673}
             height={5509}
-            loading={"eager"}
+            priority={true}
           />
           <Image
             src="/empreinte-02O1bXB_fgk-unsplash.jpg"
@@ -82,7 +82,7 @@ export default function Home() {
             id="hero_image"
             width={3207}
             height={4811}
-            loading={"eager"}
+            priority={true}
           />
           <Image
             src="/nathan-dumlao-Ic8RmXGyfNc-unsplash.jpg"
@@ -91,7 +91,7 @@ export default function Home() {
             id="hero_image"
             width={4480}
             height={6720}
-            loading={"eager"}
+            priority={true}
           />
           <Image
             src="/pariwat-pannium-lKQFFWoCjr8-unsplash.jpg"
@@ -100,7 +100,7 @@ export default function Home() {
             id="hero_image"
             width={3016}
             height={4528}
-            loading={"eager"}
+            priority={true}
           />
         </div>
       </section>

@@ -41,7 +41,7 @@ function About() {
               className={styles.img}
               width={5472}
               height={3648}
-              loading={"eager"}
+              priority={true}
             />
           </div>
         </section>
@@ -83,7 +83,7 @@ function About() {
               className={styles.img}
               width={2880}
               height={3600}
-              loading={"eager"}
+              priority={true}
             />
           </div>
         </section>
