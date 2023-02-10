@@ -2,6 +2,9 @@ import styles from "@/styles/About.module.css";
 import Head from "next/head";
 import Image from "next/image";
 
+import about1 from "../images/petr-sevcovic-qE1jxYXiwOA-unsplash.jpg";
+import about2 from "../images/gian-cescon-GxQ13MXLTHQ-unsplash.jpg";
+
 function About() {
   return (
     <>
@@ -36,7 +39,7 @@ function About() {
           </div>
           <div className={styles.img_container}>
             <Image
-              src="/petr-sevcovic-qE1jxYXiwOA-unsplash.jpg"
+              src={about1}
               alt=""
               className={styles.img}
               width={5472}
@@ -78,7 +81,7 @@ function About() {
           </div>
           <div className={styles.img_container}>
             <Image
-              src="/gian-cescon-GxQ13MXLTHQ-unsplash.jpg"
+              src={about2}
               alt=""
               className={styles.img}
               width={2880}

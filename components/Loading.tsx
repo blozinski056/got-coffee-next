@@ -1,5 +1,6 @@
 import styles from "@/styles/Loading.module.css";
 import Image from "next/image";
+import bean from "../images/coffee-bean.png";
 
 function Loading() {
   return (
@@ -7,44 +8,44 @@ function Loading() {
       <h3>Brewing...</h3>
       <div className={styles.bean_container}>
         <Image
-          src="/coffee-bean.png"
+          priority
+          src={bean}
           alt=""
           className={styles.bean}
           width={48}
           height={48}
-          priority
         />
         <Image
-          src="/coffee-bean.png"
+          priority
+          src={bean}
           alt=""
           className={styles.bean}
           width={48}
           height={48}
-          priority
         />
         <Image
-          src="/coffee-bean.png"
+          priority
+          src={bean}
           alt=""
           className={styles.bean}
           width={48}
           height={48}
-          priority
         />
         <Image
-          src="/coffee-bean.png"
+          priority
+          src={bean}
           alt=""
           className={styles.bean}
           width={48}
           height={48}
-          priority
         />
         <Image
-          src="/coffee-bean.png"
+          priority
+          src={bean}
           alt=""
           className={styles.bean}
           width={48}
           height={48}
-          priority
         />
       </div>
     </section>
