@@ -12,6 +12,7 @@ function Loading() {
           className={styles.bean}
           width={48}
           height={48}
+          loading={"eager"}
         />
         <Image
           src="/coffee-bean.png"
@@ -19,6 +20,7 @@ function Loading() {
           className={styles.bean}
           width={48}
           height={48}
+          loading={"eager"}
         />
         <Image
           src="/coffee-bean.png"
@@ -26,6 +28,7 @@ function Loading() {
           className={styles.bean}
           width={48}
           height={48}
+          loading={"eager"}
         />
         <Image
           src="/coffee-bean.png"
@@ -33,6 +36,7 @@ function Loading() {
           className={styles.bean}
           width={48}
           height={48}
+          loading={"eager"}
         />
         <Image
           src="/coffee-bean.png"
@@ -40,6 +44,7 @@ function Loading() {
           className={styles.bean}
           width={48}
           height={48}
+          loading={"eager"}
         />
       </div>
     </section>

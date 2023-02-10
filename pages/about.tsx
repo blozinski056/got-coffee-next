@@ -41,6 +41,7 @@ function About() {
               className={styles.img}
               width={5472}
               height={3648}
+              loading={"eager"}
             />
           </div>
         </section>
@@ -82,6 +83,7 @@ function About() {
               className={styles.img}
               width={2880}
               height={3600}
+              loading={"eager"}
             />
           </div>
         </section>

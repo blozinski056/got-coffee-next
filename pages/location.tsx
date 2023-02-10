@@ -58,6 +58,7 @@ function Location() {
               className={styles.market_img}
               width={2525}
               height={3787}
+              loading={"eager"}
             />
           </div>
           <div className={styles.needle_container}>
@@ -67,6 +68,7 @@ function Location() {
               className={styles.needle_img}
               width={5728}
               height={3165}
+              loading={"eager"}
             />
           </div>
         </div>
