@@ -3,6 +3,7 @@ import type { AppProps } from "next/app";
 import Navbar from "@/components/Navbar";
 import Loading from "@/components/Loading";
 import { useState, useEffect } from "react";
+import Head from "next/head";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [loading, setLoading] = useState<boolean>(true);
@@ -74,6 +75,11 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <>
+      <Head>
+        <title>got coffee?</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/coffee-bean.png" />
+      </Head>
       {loading && <Loading />}
       {!loading && (
         <>

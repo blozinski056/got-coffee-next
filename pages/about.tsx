@@ -1,5 +1,6 @@
 import styles from "@/styles/About.module.css";
 import Head from "next/head";
+import Image from "next/image";
 
 function About() {
   return (
@@ -34,10 +35,12 @@ function About() {
             </div>
           </div>
           <div className={styles.img_container}>
-            <img
+            <Image
               src="/petr-sevcovic-qE1jxYXiwOA-unsplash.jpg"
               alt=""
               className={styles.img}
+              width={5472}
+              height={3648}
             />
           </div>
         </section>
@@ -73,10 +76,12 @@ function About() {
             </div>
           </div>
           <div className={styles.img_container}>
-            <img
+            <Image
               src="/gian-cescon-GxQ13MXLTHQ-unsplash.jpg"
               alt=""
               className={styles.img}
+              width={2880}
+              height={3600}
             />
           </div>
         </section>

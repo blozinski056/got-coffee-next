@@ -1,6 +1,7 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import { useEffect } from "react";
+import Image from "next/image";
 
 export default function Home() {
   useEffect(() => {
@@ -56,35 +57,45 @@ export default function Home() {
           <h3>COFFEE SHOP</h3>
         </div>
         <div className={styles.image_container}>
-          <img
+          <Image
             src="/tina-guina-obV_LM0KjxY-unsplash.jpg"
             alt=""
             className={styles.hero_image}
             id="hero_image"
+            width={4096}
+            height={273}
           />
-          <img
+          <Image
             src="/nathan-dumlao-Y3AqmbmtLQI-unsplash.jpg"
             alt=""
             className={styles.hero_image}
             id="hero_image"
+            width={3673}
+            height={5509}
           />
-          <img
+          <Image
             src="/empreinte-02O1bXB_fgk-unsplash.jpg"
             alt=""
             className={styles.hero_image}
             id="hero_image"
+            width={3207}
+            height={4811}
           />
-          <img
+          <Image
             src="/nathan-dumlao-Ic8RmXGyfNc-unsplash.jpg"
             alt=""
             className={styles.hero_image}
             id="hero_image"
+            width={4480}
+            height={6720}
           />
-          <img
+          <Image
             src="/pariwat-pannium-lKQFFWoCjr8-unsplash.jpg"
             alt=""
             className={styles.hero_image}
             id="hero_image"
+            width={3016}
+            height={4528}
           />
         </div>
       </section>

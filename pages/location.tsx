@@ -1,9 +1,13 @@
 import styles from "@/styles/Location.module.css";
 import Head from "next/head";
 import { useEffect } from "react";
+import Image from "next/image";
 
 function Location() {
   useEffect(() => {
+    const h = document.getElementById("hours") as HTMLElement;
+    h.innerHTML =
+      "Monday: 7am - 3pm <br /> Tuesday: Closed <br /> Wednesday: 7am - 3pm <br /> Thursday: 7am - 3pm <br /> Friday: 7am - 3pm <br /> Saturday: 8am - 4pm <br /> Sunday: 8am -4pm <br />";
     window.addEventListener("resize", () => {
       const h = document.getElementById("hours") as HTMLElement;
       if (window.innerWidth < 1000) {
@@ -48,17 +52,21 @@ function Location() {
             <div className={styles.phone}>(206) 448-8762</div>
           </div>
           <div className={styles.market_container}>
-            <img
+            <Image
               src="/colin-lloyd-JHWZv4fBZIk-unsplash.jpg"
               alt=""
               className={styles.market_img}
+              width={2525}
+              height={3787}
             />
           </div>
           <div className={styles.needle_container}>
-            <img
+            <Image
               src="/robert-ritchie-JEicDFy5Cd8-unsplash.jpg"
               alt=""
               className={styles.needle_img}
+              width={5728}
+              height={3165}
             />
           </div>
         </div>
