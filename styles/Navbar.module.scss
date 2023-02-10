@@ -11,21 +11,40 @@
   justify-content: $jc;
 }
 
+@media (max-width: 699px) {
+  .menu_container {
+    top: 5%;
+    right: 50%;
+    transform: translateX(50%);
+
+    li {
+      margin: 0 5px;
+    }
+  }
+}
+
+@media (min-width: 700px) {
+  .menu_container {
+    top: 11%;
+    right: 11%;
+
+    li {
+      margin: 0 20px;
+    }
+  }
+}
+
 .menu_container {
   @include flexbox($jc: flex-end);
   position: fixed;
-  top: 11%;
-  right: 11%;
-  z-index: 10;
+  z-index: 20;
 
   ul {
     list-style: none;
 
     li {
       display: inline;
-      margin: 0 20px;
       padding: 0 10px;
-      // background-color: black;
       border-left: solid 2px transparent;
       border-right: solid 2px transparent;
       transition: 0.3s;

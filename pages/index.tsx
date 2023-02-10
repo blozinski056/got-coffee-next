@@ -51,7 +51,10 @@ export default function Home() {
         <link rel="icon" href="/coffee-bean.png" />
       </Head>
       <section className={styles.hero}>
-        <h1>got coffee?</h1>
+        <div className={styles.title_container}>
+          <h1>got coffee?</h1>
+          <h3>COFFEE SHOP</h3>
+        </div>
         <div className={styles.image_container}>
           <img
             src="/tina-guina-obV_LM0KjxY-unsplash.jpg"

@@ -19,23 +19,56 @@ export default function App({ Component, pageProps }: AppProps) {
     // when finished loading, animate hero page and menu icon
     if (!loading) {
       // animate menu icon to appear
-      const menu = document.getElementById("menu") as HTMLElement;
-      menu.animate(
-        [
-          {
-            opacity: 0,
-          },
+      // const menu = document.getElementById("menu") as HTMLElement;
+      // menu.animate(
+      //   [
+      //     {
+      //       opacity: 0,
+      //     },
+      //     {
+      //       opacity: 1,
+      //     },
+      //   ],
+      //   {
+      //     duration: 500,
+      //     fill: "forwards",
+      //     delay: 2500,
+      //     easing: "ease-in",
+      //   }
+      // );
+      // menu.animate(
+      //   [
+      //     {
+      //       transform: "rotate(0deg)",
+      //     },
+      //     {
+      //       transform: "rotate(90deg)",
+      //     },
+      //   ],
+      //   {
+      //     duration: 300,
+      //     fill: "forwards",
+      //     delay: 3000,
+      //     easing: "ease",
+      //   }
+      // );
+
+      let menuTabs = document.querySelectorAll(".menu_tab");
+      for (let i = 0; i < menuTabs.length; i++) {
+        menuTabs[i].animate(
           {
             opacity: 1,
+            cursor: "pointer",
+            pointerEvents: "initial",
           },
-        ],
-        {
-          duration: 500,
-          fill: "forwards",
-          delay: 2500,
-          easing: "ease-in",
-        }
-      );
+          {
+            duration: 200,
+            fill: "forwards",
+            easing: "ease-in",
+            delay: 100 * (menuTabs.length - i + 1) + 2500,
+          }
+        );
+      }
     }
   }, [loading]);
 

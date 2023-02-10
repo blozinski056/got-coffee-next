@@ -1,19 +1,35 @@
+@media (max-width: 699px) {
+  .menu_container {
+    top: 5%;
+    right: 50%;
+    transform: translateX(50%);
+  }
+  .menu_container li {
+    margin: 0 5px;
+  }
+}
+@media (min-width: 700px) {
+  .menu_container {
+    top: 11%;
+    right: 11%;
+  }
+  .menu_container li {
+    margin: 0 20px;
+  }
+}
 .menu_container {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
   position: fixed;
-  top: 11%;
-  right: 11%;
-  z-index: 10;
+  z-index: 20;
 }
 .menu_container ul {
   list-style: none;
 }
 .menu_container ul li {
   display: inline;
-  margin: 0 20px;
   padding: 0 10px;
   border-left: solid 2px transparent;
   border-right: solid 2px transparent;

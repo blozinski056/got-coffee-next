@@ -11,20 +11,11 @@ function About() {
       </Head>
       <div id="wrapper" className={styles.wrapper}>
         <section className={styles.about}>
-          <div className={styles.img_container}>
-            <img
-              src="/petr-sevcovic-qE1jxYXiwOA-unsplash.jpg"
-              alt=""
-              className={styles.img}
-            />
-          </div>
-
           <div className={styles.title_container}>
             <div className={styles.title}>
               About&nbsp;<span> got coffee?</span>
             </div>
           </div>
-
           <div className={styles.paragraph_container}>
             <div className={styles.paragraph}>
               In February of 2020, we opened the doors of our cozy, little space
@@ -41,6 +32,13 @@ function About() {
               If you visit us on the weekend, be sure to ask us about our pastry
               of the day! We have a new pastry every Saturday and Sunday!
             </div>
+          </div>
+          <div className={styles.img_container}>
+            <img
+              src="/petr-sevcovic-qE1jxYXiwOA-unsplash.jpg"
+              alt=""
+              className={styles.img}
+            />
           </div>
         </section>
         <section className={styles.founder}>
