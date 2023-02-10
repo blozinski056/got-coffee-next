@@ -5,7 +5,84 @@
   justify-content: flex-start;
   overflow-x: hidden;
 }
-@media (max-width: 1199px) {
+@media (max-width: 499px) {
+  .wrapper .about {
+    width: 500px;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 20vh;
+  }
+  .wrapper .about .title_container {
+    width: 400px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    position: relative;
+  }
+  .wrapper .about .title_container .title {
+    font-size: 30px;
+  }
+  .wrapper .about .paragraph_container {
+    position: relative;
+    margin-bottom: 30px;
+  }
+  .wrapper .about .img_container {
+    width: 400px;
+    height: 270px;
+  }
+  .wrapper .about .img_container img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .wrapper .founder {
+    width: 100vw;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 10vh;
+  }
+  .wrapper .founder .info {
+    width: 600px;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+  }
+  .wrapper .founder .info .founder_title_container,
+  .wrapper .founder .info .founder_name_container,
+  .wrapper .founder .info .founder_intro_container {
+    position: relative;
+    margin-bottom: 30px;
+  }
+  .wrapper .founder .img_container {
+    width: 400px;
+    height: 500px;
+    position: relative;
+    margin-bottom: 30px;
+  }
+  .wrapper .founder .img_container .img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+@media (max-width: 1199px) and (min-width: 500px) {
   .wrapper .about {
     width: 100vw;
     height: -moz-fit-content;
@@ -45,11 +122,41 @@
   }
   .wrapper .founder {
     width: 100vw;
-    height: auto;
+    height: -moz-fit-content;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-top: 10vh;
+  }
+  .wrapper .founder .info {
+    width: 600px;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+  }
+  .wrapper .founder .info .founder_title_container,
+  .wrapper .founder .info .founder_name_container,
+  .wrapper .founder .info .founder_intro_container {
+    position: relative;
+    margin-bottom: 30px;
+  }
+  .wrapper .founder .img_container {
+    width: 400px;
+    height: 500px;
+    position: relative;
+    margin-bottom: 30px;
+  }
+  .wrapper .founder .img_container .img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 @media (max-width: 1399px) and (min-width: 1200px) {
@@ -88,10 +195,43 @@
   .wrapper .founder {
     width: 100vw;
     height: 100vh;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+  }
+  .wrapper .founder .info {
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    top: 18%;
+    right: 5%;
+  }
+  .wrapper .founder .info .founder_title_container {
+    position: absolute;
+    top: 0%;
+    right: 10%;
+  }
+  .wrapper .founder .info .founder_name_container {
+    position: absolute;
+    top: 9%;
+    z-index: 5;
+  }
+  .wrapper .founder .info .founder_intro_container {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .wrapper .founder .img_container {
+    width: auto;
+    height: 70%;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translateY(-50%);
+  }
+  .wrapper .founder .img_container .img {
+    width: auto;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 }
 @media (min-width: 1400px) {
@@ -130,10 +270,43 @@
   .wrapper .founder {
     width: 100vw;
     height: 100vh;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+  }
+  .wrapper .founder .info {
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    top: 18%;
+    right: 15%;
+  }
+  .wrapper .founder .info .founder_title_container {
+    position: absolute;
+    top: 0%;
+    right: 10%;
+  }
+  .wrapper .founder .info .founder_name_container {
+    position: absolute;
+    top: 9%;
+    z-index: 5;
+  }
+  .wrapper .founder .info .founder_intro_container {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .wrapper .founder .img_container {
+    width: auto;
+    height: 70%;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translateY(-50%);
+  }
+  .wrapper .founder .img_container .img {
+    width: auto;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 }
 .wrapper .about {
@@ -186,42 +359,16 @@
   opacity: 0.8;
 }
 .wrapper .founder {
-  width: 100vw;
-  height: 100vh;
   background-color: black;
   position: relative;
 }
-.wrapper .founder .img_container {
-  width: auto;
-  height: 70%;
-  position: absolute;
-  top: 50%;
-  left: 20%;
-  transform: translateY(-50%);
-  padding: 10px;
-  border: solid 2px white;
-}
-.wrapper .founder .img_container .img {
-  width: auto;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  opacity: 0.8;
-}
 .wrapper .founder .info {
-  width: 600px;
-  height: 600px;
-  position: absolute;
-  top: 18%;
-  right: 15%;
+  z-index: 10;
 }
 .wrapper .founder .info .founder_title_container {
   width: 300px;
   height: 70px;
   background-color: white;
-  position: absolute;
-  top: 0%;
-  right: 10%;
 }
 .wrapper .founder .info .founder_title_container .founder_title {
   width: 100%;
@@ -244,9 +391,6 @@
   width: 350px;
   height: 80px;
   background-color: white;
-  position: absolute;
-  top: 9%;
-  z-index: 5;
 }
 .wrapper .founder .info .founder_name_container .founder_name {
   width: 100%;
@@ -266,10 +410,6 @@
   width: 400px;
   height: 400px;
   background-color: white;
-  position: absolute;
-  bottom: 5%;
-  left: 50%;
-  transform: translateX(-50%);
 }
 .wrapper .founder .info .founder_intro_container .founder_intro {
   width: 100%;
@@ -281,4 +421,11 @@
   padding: 20px;
   font-size: 15px;
   transform: translate(-5px, -5px);
+}
+.wrapper .founder .img_container {
+  padding: 10px;
+  border: solid 2px white;
+}
+.wrapper .founder .img_container .img {
+  opacity: 0.8;
 }/*# sourceMappingURL=About.module.css.map */

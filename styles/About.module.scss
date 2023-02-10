@@ -15,7 +15,70 @@
   @include flexbox($fd: column, $jc: flex-start);
   overflow-x: hidden;
 
-  @media (max-width: 1199px) {
+  @media (max-width: 499px) {
+    .about {
+      @include w-h(500px, fit-content);
+      @include flexbox($fd: column, $jc: flex-start);
+      padding-top: 20vh;
+
+      .title_container {
+        @include w-h(400px, 100px);
+        @include flexbox;
+        margin-bottom: 30px;
+        position: relative;
+
+        .title {
+          font-size: 30px;
+        }
+      }
+
+      .paragraph_container {
+        position: relative;
+        margin-bottom: 30px;
+      }
+
+      .img_container {
+        @include w-h(400px, 270px);
+
+        img {
+          @include w-h(100%, 100%);
+          object-fit: cover;
+        }
+      }
+    }
+
+    .founder {
+      @include w-h(100vw, fit-content);
+      @include flexbox($fd: column, $jc: flex-start);
+      padding-top: 10vh;
+
+      .info {
+        @include w-h(600px, fit-content);
+        @include flexbox($fd: column, $jc: flex-start);
+        position: relative;
+
+        .founder_title_container,
+        .founder_name_container,
+        .founder_intro_container {
+          position: relative;
+          margin-bottom: 30px;
+        }
+      }
+
+      .img_container {
+        @include w-h(400px, 500px);
+        position: relative;
+        margin-bottom: 30px;
+
+        .img {
+          @include w-h(100%, 100%);
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1199px) and (min-width: 500px) {
     .about {
       @include w-h(100vw, fit-content);
       @include flexbox($fd: column, $jc: flex-start);
@@ -48,8 +111,33 @@
     }
 
     .founder {
-      @include w-h(100vw, auto);
-      @include flexbox($fd: column);
+      @include w-h(100vw, fit-content);
+      @include flexbox($fd: column, $jc: flex-start);
+      padding-top: 10vh;
+
+      .info {
+        @include w-h(600px, fit-content);
+        @include flexbox($fd: column, $jc: flex-start);
+        position: relative;
+
+        .founder_title_container,
+        .founder_name_container,
+        .founder_intro_container {
+          position: relative;
+          margin-bottom: 30px;
+        }
+      }
+
+      .img_container {
+        @include w-h(400px, 500px);
+        position: relative;
+        margin-bottom: 30px;
+
+        .img {
+          @include w-h(100%, 100%);
+          object-fit: cover;
+        }
+      }
     }
   }
 
@@ -89,7 +177,45 @@
 
     .founder {
       @include w-h(100vw, 100vh);
-      @include flexbox;
+
+      .info {
+        @include w-h(600px, 600px);
+        position: absolute;
+        top: 18%;
+        right: 5%;
+
+        .founder_title_container {
+          position: absolute;
+          top: 0%;
+          right: 10%;
+        }
+
+        .founder_name_container {
+          position: absolute;
+          top: 9%;
+          z-index: 5;
+        }
+
+        .founder_intro_container {
+          position: absolute;
+          bottom: 5%;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+
+      .img_container {
+        @include w-h(auto, 70%);
+        position: absolute;
+        top: 50%;
+        left: 20%;
+        transform: translateY(-50%);
+
+        .img {
+          @include w-h(auto, 100%);
+          object-fit: contain;
+        }
+      }
     }
   }
 
@@ -129,7 +255,45 @@
 
     .founder {
       @include w-h(100vw, 100vh);
-      @include flexbox;
+
+      .info {
+        @include w-h(600px, 600px);
+        position: absolute;
+        top: 18%;
+        right: 15%;
+
+        .founder_title_container {
+          position: absolute;
+          top: 0%;
+          right: 10%;
+        }
+
+        .founder_name_container {
+          position: absolute;
+          top: 9%;
+          z-index: 5;
+        }
+
+        .founder_intro_container {
+          position: absolute;
+          bottom: 5%;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+
+      .img_container {
+        @include w-h(auto, 70%);
+        position: absolute;
+        top: 50%;
+        left: 20%;
+        transform: translateY(-50%);
+
+        .img {
+          @include w-h(auto, 100%);
+          object-fit: contain;
+        }
+      }
     }
   }
 
@@ -182,38 +346,15 @@
   }
 
   .founder {
-    @include w-h(100vw, 100vh);
     background-color: black;
     position: relative;
 
-    .img_container {
-      @include w-h(auto, 70%);
-      position: absolute;
-      top: 50%;
-      left: 20%;
-      transform: translateY(-50%);
-      padding: 10px;
-      border: solid 2px white;
-
-      .img {
-        @include w-h(auto, 100%);
-        object-fit: contain;
-        opacity: 0.8;
-      }
-    }
-
     .info {
-      @include w-h(600px, 600px);
-      position: absolute;
-      top: 18%;
-      right: 15%;
+      z-index: 10;
 
       .founder_title_container {
         @include w-h(300px, 70px);
         background-color: white;
-        position: absolute;
-        top: 0%;
-        right: 10%;
 
         .founder_title {
           @include w-h(100%, 100%);
@@ -234,9 +375,6 @@
       .founder_name_container {
         @include w-h(350px, 80px);
         background-color: white;
-        position: absolute;
-        top: 9%;
-        z-index: 5;
 
         .founder_name {
           @include w-h(100%, 100%);
@@ -253,10 +391,6 @@
       .founder_intro_container {
         @include w-h(400px, 400px);
         background-color: white;
-        position: absolute;
-        bottom: 5%;
-        left: 50%;
-        transform: translateX(-50%);
 
         .founder_intro {
           @include w-h(100%, 100%);
@@ -268,6 +402,15 @@
           font-size: 15px;
           transform: translate(-5px, -5px);
         }
+      }
+    }
+
+    .img_container {
+      padding: 10px;
+      border: solid 2px white;
+
+      .img {
+        opacity: 0.8;
       }
     }
   }

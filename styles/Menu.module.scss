@@ -11,9 +11,25 @@
   justify-content: $jc;
 }
 
+@media (max-height: 774px) {
+  .menu {
+    @include w-h(100vw, 775px);
+    @include flexbox;
+
+    .items_container {
+      margin-top: 150px;
+    }
+  }
+}
+
+@media (min-height: 775px) {
+  .menu {
+    @include w-h(100vw, 100vh);
+    @include flexbox;
+  }
+}
+
 .menu {
-  @include w-h(100vw, 100vh);
-  @include flexbox;
   background-color: black;
 
   @media (max-width: 699px) {

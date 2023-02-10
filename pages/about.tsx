@@ -42,13 +42,6 @@ function About() {
           </div>
         </section>
         <section className={styles.founder}>
-          <div className={styles.img_container}>
-            <img
-              src="/gian-cescon-GxQ13MXLTHQ-unsplash.jpg"
-              alt=""
-              className={styles.img}
-            />
-          </div>
           <div className={styles.info}>
             <div className={styles.founder_title_container}>
               <div className={styles.founder_title}>
@@ -78,6 +71,13 @@ function About() {
                 Be sure to say, "Hi," the next time you see Julia!
               </div>
             </div>
+          </div>
+          <div className={styles.img_container}>
+            <img
+              src="/gian-cescon-GxQ13MXLTHQ-unsplash.jpg"
+              alt=""
+              className={styles.img}
+            />
           </div>
         </section>
       </div>

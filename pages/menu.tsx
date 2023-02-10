@@ -61,3 +61,9 @@ function Menu() {
 }
 
 export default Menu;
+
+export async function getStaticProps(context: any) {
+  return {
+    props: {},
+  };
+}
