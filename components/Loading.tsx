@@ -1,15 +1,46 @@
 import styles from "@/styles/Loading.module.css";
+import Image from "next/image";
 
 function Loading() {
   return (
     <section className={styles.loading}>
       <h3>Brewing...</h3>
       <div className={styles.bean_container}>
-        <img src="/coffee-bean.png" alt="" className={styles.bean} />
-        <img src="/coffee-bean.png" alt="" className={styles.bean} />
-        <img src="/coffee-bean.png" alt="" className={styles.bean} />
-        <img src="/coffee-bean.png" alt="" className={styles.bean} />
-        <img src="/coffee-bean.png" alt="" className={styles.bean} />
+        <Image
+          src="/coffee-bean.png"
+          alt=""
+          className={styles.bean}
+          width={48}
+          height={48}
+        />
+        <Image
+          src="/coffee-bean.png"
+          alt=""
+          className={styles.bean}
+          width={48}
+          height={48}
+        />
+        <Image
+          src="/coffee-bean.png"
+          alt=""
+          className={styles.bean}
+          width={48}
+          height={48}
+        />
+        <Image
+          src="/coffee-bean.png"
+          alt=""
+          className={styles.bean}
+          width={48}
+          height={48}
+        />
+        <Image
+          src="/coffee-bean.png"
+          alt=""
+          className={styles.bean}
+          width={48}
+          height={48}
+        />
       </div>
     </section>
   );

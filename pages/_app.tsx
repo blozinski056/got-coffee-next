@@ -12,7 +12,7 @@ export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 2500);
   }, []);
 
   // animate navbar after loading page disappears

@@ -71,7 +71,7 @@ function About() {
                 the next best nitro stout in Washington.
                 <br />
                 <br />
-                Be sure to say, "Hi," the next time you see Julia!
+                Be sure to say, &quot;Hi,&quot; the next time you see Julia!
               </div>
             </div>
           </div>
