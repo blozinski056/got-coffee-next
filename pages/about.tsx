@@ -2,8 +2,8 @@ import styles from "@/styles/About.module.css";
 import Head from "next/head";
 import Image from "next/image";
 
-import about1 from "../images/petr-sevcovic-qE1jxYXiwOA-unsplash.jpg";
-import about2 from "../images/gian-cescon-GxQ13MXLTHQ-unsplash.jpg";
+import about1 from "../public/petr-sevcovic-qE1jxYXiwOA-unsplash.jpg";
+import about2 from "../public/gian-cescon-GxQ13MXLTHQ-unsplash.jpg";
 
 function About() {
   return (
@@ -38,14 +38,7 @@ function About() {
             </div>
           </div>
           <div className={styles.img_container}>
-            <Image
-              src={about1}
-              alt=""
-              className={styles.img}
-              width={5472}
-              height={3648}
-              priority
-            />
+            <Image priority src={about1} alt="" className={styles.img} />
           </div>
         </section>
         <section className={styles.founder}>
@@ -80,14 +73,7 @@ function About() {
             </div>
           </div>
           <div className={styles.img_container}>
-            <Image
-              src={about2}
-              alt=""
-              className={styles.img}
-              width={2880}
-              height={3600}
-              priority
-            />
+            <Image priority src={about2} alt="" className={styles.img} />
           </div>
         </section>
       </div>
