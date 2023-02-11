@@ -1,12 +1,24 @@
 import styles from "@/styles/Location.module.css";
 import Head from "next/head";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 
 import location1 from "../public/colin-lloyd-JHWZv4fBZIk-unsplash.jpg";
 import location2 from "../public/robert-ritchie-JEicDFy5Cd8-unsplash.jpg";
 
-function Location() {
+interface Props {
+  setLoading: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+function Location({ setLoading }: Props) {
+  const [imagesLoaded, setImagesLoaded] = useState<number>(0);
+
+  useEffect(() => {
+    if (imagesLoaded === 2) {
+      setLoading(false);
+    }
+  }, [imagesLoaded, setLoading]);
+
   useEffect(() => {
     const h = document.getElementById("hours") as HTMLElement;
     h.innerHTML =
@@ -60,6 +72,9 @@ function Location() {
               src={location1}
               alt=""
               className={styles.market_img}
+              onLoadingComplete={() =>
+                setImagesLoaded((prevImagesLoaded) => prevImagesLoaded + 1)
+              }
             />
           </div>
           <div className={styles.needle_container}>
@@ -68,6 +83,9 @@ function Location() {
               src={location2}
               alt=""
               className={styles.needle_img}
+              onLoadingComplete={() =>
+                setImagesLoaded((prevImagesLoaded) => prevImagesLoaded + 1)
+              }
             />
           </div>
         </div>

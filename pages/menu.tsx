@@ -1,7 +1,12 @@
 import styles from "@/styles/Menu.module.css";
 import Head from "next/head";
 
-function Menu() {
+interface Props {
+  setLoading: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+function Menu({ setLoading }: Props) {
+  setLoading(false);
   return (
     <>
       <Head>

@@ -1,11 +1,24 @@
 import styles from "@/styles/About.module.css";
 import Head from "next/head";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 import about1 from "../public/petr-sevcovic-qE1jxYXiwOA-unsplash.jpg";
 import about2 from "../public/gian-cescon-GxQ13MXLTHQ-unsplash.jpg";
 
-function About() {
+interface Props {
+  setLoading: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+function About({ setLoading }: Props) {
+  const [imagesLoaded, setImagesLoaded] = useState<number>(0);
+
+  useEffect(() => {
+    if (imagesLoaded === 2) {
+      setLoading(false);
+    }
+  }, [imagesLoaded, setLoading]);
+
   return (
     <>
       <Head>
@@ -38,7 +51,15 @@ function About() {
             </div>
           </div>
           <div className={styles.img_container}>
-            <Image priority src={about1} alt="" className={styles.img} />
+            <Image
+              priority
+              src={about1}
+              alt=""
+              className={styles.img}
+              onLoadingComplete={() =>
+                setImagesLoaded((prevImagesLoaded) => prevImagesLoaded + 1)
+              }
+            />
           </div>
         </section>
         <section className={styles.founder}>
@@ -73,7 +94,15 @@ function About() {
             </div>
           </div>
           <div className={styles.img_container}>
-            <Image priority src={about2} alt="" className={styles.img} />
+            <Image
+              priority
+              src={about2}
+              alt=""
+              className={styles.img}
+              onLoadingComplete={() =>
+                setImagesLoaded((prevImagesLoaded) => prevImagesLoaded + 1)
+              }
+            />
           </div>
         </section>
       </div>

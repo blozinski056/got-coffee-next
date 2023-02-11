@@ -11,17 +11,32 @@ export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
   // turn off loading screen after animation
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setLoading(false);
+  //   }, 2500);
+  // }, []);
+
+  // useEffect(() => {
+  //   if (router.pathname === "/") {
+  //     setTimeout(() => {
+  //       setLoading(false);
+  //     }, 2500);
+  //   } else {
+  //     setLoading(false);
+  //   }
+  // }, [router.pathname]);
+
   useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 2500);
-  }, []);
+    setLoading(true);
+  }, [Component]);
 
   // animate navbar after loading page disappears
   useEffect(() => {
-    // when finished loading, animate hero page and menu icon
+    // check if loading is complete
     if (!loading) {
       if (router.pathname === "/") {
+        // if at the home page then animate images and menu afterwards
         let menuTabs = document.querySelectorAll(".menu_tab");
         for (let i = 0; i < menuTabs.length; i++) {
           menuTabs[i].animate(
@@ -39,6 +54,7 @@ export default function App({ Component, pageProps }: AppProps) {
           );
         }
       } else {
+        // if not at the home page then make menu appear immediately
         let menuTabs = document.querySelectorAll(".menu_tab");
         for (let i = 0; i < menuTabs.length; i++) {
           menuTabs[i].animate(
@@ -64,13 +80,11 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/coffee-bean.png" />
       </Head>
-      {loading && <Loading />}
-      {!loading && (
-        <>
-          <Navbar />
-          <Component {...pageProps} />
-        </>
-      )}
+      <>
+        {loading && <Loading />}
+        <Navbar />
+        <Component {...pageProps} setLoading={setLoading} />
+      </>
     </>
   );
 }
